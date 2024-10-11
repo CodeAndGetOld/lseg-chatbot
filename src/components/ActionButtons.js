@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../src/App.css';
 
-const StockPrice = ({ stock, goToStockMenu, goToHome }) => {
+const ActionButtons = ({ goToStockMenu, goToHome }) => {
   return (
     <div className="chat-buttons">
       <button className="action-button" onClick={goToStockMenu}>
-        Back
+        Back to stocks
       </button>
       <button className="action-button" onClick={goToHome}>
         Main menu
@@ -14,4 +14,4 @@ const StockPrice = ({ stock, goToStockMenu, goToHome }) => {
   );
 };
 
-export default StockPrice;
+export default ActionButtons;

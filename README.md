@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Stock Chatbot Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React-based chatbot that allows users to select from one of three stock exchanges (London Stock Exchange, New York Stock Exchange, and NASDAQ), view a list of stocks from the selected exchange, and get the current price of any selected stock. The chatbot is designed with a conversational UI, where the user's messages are shown on the right side, and the bot's responses appear on the left side.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+Select from three major stock exchanges.
+View a list of popular stocks from the selected exchange.
+Get the current stock price of a selected stock.
+Navigate between the main menu and stock menus using a chatbot-style interface.
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Before you begin, ensure you have the following software installed on your system:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Node.js (v12 or higher)
+npm (comes with Node.js)
+To verify that Node.js and npm are installed, run the following commands in your terminal:
 
-### `npm test`
+node -v
+npm -v
+If they are not installed, you can download and install Node.js from <https://nodejs.org/>.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Setup
 
-### `npm run build`
+1. Clone the Repository
+First, clone the repository to your local machine:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+git clone <https://github.com/CodeAndGetOld/lseg-chatbot.git>
+cd lseg-chatbot
+2. Install Dependencies
+Next, install the required dependencies using npm. This will install React and all other necessary packages specified in the package.json file.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm install
+3. Start the Development Server
+Once the dependencies are installed, you can start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm start
+This command will start the React development server. Once it's running, you can access the app at <http://localhost:3000> in your web browser.
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+On the main screen, you will be prompted to select a stock exchange (London Stock Exchange, New York Stock Exchange, or NASDAQ).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+After selecting a stock exchange, a list of five top stocks from that exchange will appear.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Select one of the stocks to view its current price.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You can either return to the main menu or go back to the list of stocks.
 
-## Learn More
+## Customization
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you want to customize the stock data or exchanges:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Update the stockData.js file in the src directory. This file contains the stock exchange and stock information in JSON format.
 
-### Code Splitting
+export default [
+    {
+        "code": "LSE",
+        "stockExchange": "London Stock Exchange",
+        "topStocks": [
+            {
+                "code": "CRDA",
+                "stockName": "CRODA INTERNATIONAL PLC",
+                "price": 4807.00
+            },
+            // more stocks here
+        ]
+    },
+    // more exchanges here
+];
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Troubleshooting
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Issue: The development server does not start.
+Make sure you're in the correct directory (cd lseg-chatbot).
+Check that all dependencies are installed (npm install).
+Ensure that Node.js and npm are installed and working correctly.
+2. Issue: npm start says port 3000 is in use.
+If port 3000 is already in use by another process, you can either kill that process or allow React to run on another port. When prompted, press Y to use a different port (e.g., localhost:3001).
