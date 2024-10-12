@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/lseg-chatbot/static/css/main.dbc6f14f.css",
+    "main.js": "/lseg-chatbot/static/js/main.b6d24621.js",
+    "static/media/user-avatar.png": "/lseg-chatbot/static/media/user-avatar.a6143582309785dca610.png",
+    "index.html": "/lseg-chatbot/index.html",
+    "main.dbc6f14f.css.map": "/lseg-chatbot/static/css/main.dbc6f14f.css.map",
+    "main.b6d24621.js.map": "/lseg-chatbot/static/js/main.b6d24621.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dbc6f14f.css",
+    "static/js/main.b6d24621.js"
+  ]
+}
